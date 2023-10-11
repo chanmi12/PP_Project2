@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+      .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>
 <script>
 function checkValue(){
       var level = document.forms["myForm"]["level"].value;
@@ -27,13 +35,14 @@ function checkValue(){
 </script>
 </head>
 <body>
-
+<div>
 <form name ="myForm"  action = "/form_ok.php" onsubmit="return checkValue()" method="post">
 level:(*/**/***): <input type="text" name="level" id="level"/><br>
 Word: <input type ="text" name="word" id="word"/><br>
 Meaning: <input type ="text" name="meaning" id="meaning"/><br>
 Date(ex:2023-10-10): <input type ="text" name="date" id="date"/><br>
 <input type="button" value="submit" onclick="checkValue()"/>
+</div>
 </body>
 </html>
 
